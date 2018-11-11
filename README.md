@@ -8,12 +8,14 @@ Firstly, I came with an idea of including pricing rules in the function. The tri
 
 Finally, user can basically set up the empty basket and then add items into the basket. The separate functions allow user to check the total discounted price and delivery charge. The following is an example of command.
 
-Basket = item('')
+Basket = item('')  #Starting with empty basket                          
 
-Basket.AddItem('A')
+Basket.AddItem('A')  #Adding items
 
-TotalPrice = Basket.Total()
+TotalPrice = Basket.Total()  #Calculating total discounted price for the basket
 
-DeliveryCharge = Basket.DeliveryCharge()
+DeliveryCharge = Basket.DeliveryCharge()  #Calculating the delivery charge
 
-OverallTotal = TotalPrice + DeliveryCharge
+OverallTotal = TotalPrice + DeliveryCharge  #Summarizing the overall price
+
+Print(OverallTotal)  #Printing the final price
