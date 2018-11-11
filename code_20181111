@@ -9,6 +9,12 @@ class item(object):
         """
         return self.name
     
+    def AddItem(self,name2):
+        L=self.name
+        self.name=L+name2
+        b=self.name
+        return b
+    
     def Total(self):
         """
         Total price of items after discount according to pricing rules
@@ -40,6 +46,7 @@ class item(object):
                 tot=P[i]*bas[i]
             t+=tot
         return t
+    
     def DeliveryCharge(self):
         """
         Delivery charge of the basket
