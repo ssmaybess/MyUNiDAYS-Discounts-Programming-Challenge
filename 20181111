@@ -1,0 +1,50 @@
+class item(object):
+    
+    def __init__(self, name):
+        self.name=name
+    
+    def __str__(self):
+        """
+        List items in the basket
+        """
+        return self.name
+    
+    def Total(self):
+        """
+        Total price of items after discount according to pricing rules
+        """
+        L=self.name
+        P={'A':8,'B':12,'C':4,'D':7,'E':5}
+        tot=0
+        t=0
+        lst=list(L)
+        s=set(lst)
+        bas=dict()
+        cond=[]
+        for j in s:
+            count=0
+            for k in sorted(lst):
+                if j==k:
+                    count+=1
+            bas[j]=count
+        for i in s:
+            if i=='B' and bas[i]>=2:
+                tot=bas[i]*P[i]*5/6+(bas[i]%2)*P[i]*1/6
+            elif i=='C' and bas[i]>=3:
+                tot=bas[i]*P[i]*5/6+(bas[i]%3)*P[i]*1/6
+            elif i=='D' and bas[i]>=2:
+                tot=(bas[i]/2)*P[i]+(bas[i]%2)*P[i]
+            elif i=='E' and bas[i]>=3:
+                tot=bas[i]*P[i]*2/3+(bas[i]%3)*P[i]*1/3
+            else:
+                tot=P[i]*bas[i]
+            t+=tot
+        return t
+    def DeliveryCharge(self):
+        """
+        Delivery charge of the basket
+        """
+        d=0
+        if self.Total()<50:
+            d+=7
+        return d
