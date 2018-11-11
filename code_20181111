@@ -20,7 +20,7 @@ class item(object):
     
     def Total(self):
         """
-        Total price of items after discount according to pricing rules
+        Calculate the total price of items after discount according to pricing rules
         """
         L=self.name
         P={'A':8,'B':12,'C':4,'D':7,'E':5}
@@ -52,7 +52,7 @@ class item(object):
     
     def DeliveryCharge(self):
         """
-        Delivery charge of the basket
+        Caculate the delivery charge of the basket
         """
         d=0
         if self.Total()<50:
