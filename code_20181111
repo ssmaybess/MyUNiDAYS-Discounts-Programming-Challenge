@@ -10,6 +10,9 @@ class item(object):
         return self.name
     
     def AddItem(self,name2):
+        """
+        Adding items into the basket
+        """
         L=self.name
         self.name=L+name2
         b=self.name
