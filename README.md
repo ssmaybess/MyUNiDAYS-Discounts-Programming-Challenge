@@ -1,5 +1,6 @@
 # MyUNiDAYS-Discounts-Programming-Challenge
 ## Author: Sawanya Nilyok
+### Programming Language: Python
 
 I simply wrote the code that is easily understanding by itself and user-friendly. I deployed Python knowledge that I have studied so far in my Master course by mainly using Object-Oriented Programming (OOP).
 
